@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/versions/1_0_0/create_todo_table.yml
+  - include:
+      file: liquibase/versions/1_0_0/add_todo_table_columns.yml
+  - include:
+      file: liquibase/versions/1_0_0/insert_todo_table_datas.yml
+  - include:
+      file: liquibase/versions/1_0_0/create_status_table.yml

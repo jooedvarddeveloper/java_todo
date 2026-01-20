@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.0:add_todo_table_columns
+      author: joo.edvard
+      changes:
+        - addColumn:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  type: VARCHAR(500)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: completed
+                  type: boolean
+                  constraints:
+                    nullable: true

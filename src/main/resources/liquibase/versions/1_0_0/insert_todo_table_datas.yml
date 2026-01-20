@@ -1,0 +1,104 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.0:insert_todo_table_datas
+      author: joo.edvard
+      changes:
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Buy groceries"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Clean the kitchen"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Write unit tests"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Fix bug #123"
+              - column:
+                  name: completed
+                  valueBoolean: true
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Read Spring Boot docs"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Walk the dog"
+              - column:
+                  name: completed
+                  valueBoolean: true
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Prepare dinner"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Update README"
+              - column:
+                  name: completed
+                  valueBoolean: true
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Plan weekend trip"
+              - column:
+                  name: completed
+                  valueBoolean: false
+
+        - insert:
+            tableName: todo
+            columns:
+              - column:
+                  name: description
+                  value: "Pay bills"
+              - column:
+                  name: completed
+                  valueBoolean: false

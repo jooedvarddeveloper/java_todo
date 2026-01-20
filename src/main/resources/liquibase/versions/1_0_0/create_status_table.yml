@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.0:create_status_table
+      author: joo.edvard
+      changes:
+        - createTable:
+            tableName: todo_status
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: todo_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+        - sql:
+            sql: >
+              ALTER TABLE todo_status
+              ADD CONSTRAINT chk_todo_status
+              CHECK (status IN ('CREATED', 'IN_PROGRESS', 'FINISHED'));
+        - addForeignKeyConstraint:
+            baseTableName: todo_status
+            baseColumnNames: todo_id
+            referencedTableName: todo
+            referencedColumnNames: id
+            constraintName: fk_todo_status_todo
+            onDelete: CASCADE
